@@ -1,0 +1,83 @@
+// ========== Button Main Styles
+
+button.btn {
+	outline: none;
+	border: none;
+	font-weight: bold;
+	border-radius: 6px;
+	cursor: pointer;
+
+	&-fluid {
+		width: 100% !important;
+	}
+	
+	&-xl {
+		font-size: 1.1rem;
+		min-width: 12.5em;
+		height: 3.5em;
+		padding: 0 2em;
+	}
+
+	&-lg {
+		font-size: 1rem;
+		min-width: 12.5em;
+		height: 3.5em;
+		padding: 0 2em;
+	}
+
+	&-md {
+		font-size: .9rem;
+		min-width: 12.5em;
+		height: 3.5em;
+		padding: 0 2em;
+	}
+
+	&-sm {
+		font-size: .8rem;
+		min-width: 12.5em;
+		height: 3.5em;
+		padding: 0 2em;
+	}
+
+	&-primary {
+		border: 1px solid $primary;
+		background-color: $primary;
+		color: $secondary;
+	}
+
+	&-secondary {
+		border: 1px solid $secondary;
+		background-color: $secondary;
+		color: white;
+	}
+
+	&-outline-primary {
+		border: 2px solid $primary;
+		background-color: transparent;
+		color: $secondary;
+		transition: .5s background-color;
+
+		&:hover {
+			background-color: $primary;
+		}
+	}
+
+	&-outline-secondary {
+		border: 2px solid $secondary;
+		background-color: transparent;
+		color: $primary;
+		transition: .5s background-color;
+
+		&:hover {
+			background-color: $secondary;
+		}
+	}
+
+	&-rounded {
+		border-radius: 12px;
+	}
+
+	&-full-rounded {
+		border-radius: 50px;
+	}
+}

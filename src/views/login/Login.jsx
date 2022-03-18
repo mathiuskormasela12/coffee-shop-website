@@ -5,6 +5,9 @@ import React, { Component } from 'react';
 // import styles
 import styles from './styles/styles.module.scss';
 
+// import all components
+import { Container } from '../../components';
+
 class Login extends Component {
   constructor(props) {
     super(props);
@@ -22,7 +25,9 @@ class Login extends Component {
   render() {
     return (
       <div className={styles.login}>
-        <h1>Login</h1>
+        <Container>
+          <h1>Login</h1>
+        </Container>
       </div>
     );
   }

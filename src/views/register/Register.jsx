@@ -5,6 +5,9 @@ import React, { Component } from 'react';
 // import styles
 import styles from './styles/styles.module.scss';
 
+// import all components
+import { Container } from '../../components';
+
 class Register extends Component {
   constructor(props) {
     super(props);
@@ -22,7 +25,9 @@ class Register extends Component {
   render() {
     return (
       <div className={styles.register}>
-        <h1>Register</h1>
+        <Container>
+          <h1>Register</h1>
+        </Container>
       </div>
     );
   }

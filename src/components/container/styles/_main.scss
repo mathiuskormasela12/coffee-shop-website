@@ -1,0 +1,12 @@
+// ========== Container Main Styles
+
+div.container {
+	max-width: 85%;
+	width: calc(100% - 4rem);
+	margin: 0 auto;
+
+	&-fluid {
+		max-width: 100%;
+		width: 100%;
+	}
+}

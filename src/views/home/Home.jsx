@@ -10,6 +10,9 @@ import { setTokens, removeTokens } from '../../redux/action/auth';
 // import styles
 import styles from './styles/styles.module.scss';
 
+// import all components
+import { Container } from '../../components';
+
 class Home extends Component {
   constructor(props) {
     super(props);
@@ -35,19 +38,21 @@ class Home extends Component {
 
     return (
       <div className={styles.home}>
-        <h1
-          onClick={() => handleSetTokens({
-            accessToken: String(Date.now() * 2),
-            refreshToken: String(Date.now() * 10),
-          })}
-          aria-hidden
-          onDoubleClick={() => handleRemoveTokens()}
-        >
-          Home
+        <Container>
+          <h1
+            onClick={() => handleSetTokens({
+              accessToken: String(Date.now() * 2),
+              refreshToken: String(Date.now() * 10),
+            })}
+            aria-hidden
+            onDoubleClick={() => handleRemoveTokens()}
+          >
+            Home
 
-        </h1>
-        {accessToken && <p onClick={() => setData()} aria-hidden>Ada Token</p>}
-        {value && <p>Data</p>}
+          </h1>
+          {accessToken && <p onClick={() => setData()} aria-hidden>Ada Token</p>}
+          {value && <p>Data</p>}
+        </Container>
       </div>
     );
   }

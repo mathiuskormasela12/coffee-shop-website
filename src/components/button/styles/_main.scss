@@ -13,6 +13,14 @@ button.btn {
 	&-fluid {
 		width: 100% !important;
 	}
+
+	&-shadow-primary {
+		box-shadow: 0 0 30px -7px $primary;
+	}
+
+	&-shadow-secondary {
+		box-shadow: 0 0 30px -7px $secondary;
+	}
 	
 	&-xl {
 		font-size: 1.1rem;

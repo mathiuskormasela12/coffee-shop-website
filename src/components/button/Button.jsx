@@ -19,14 +19,15 @@ export function Button(props) {
     fullRounded,
     fluid,
     loading,
+    shadow,
   } = props;
 
-  const spinnerVariant = (loading && variant.split('-').length > 1) ? variant.split('-').slice(0).join('-') : variant.split('-')[0];
+  const spinnerVariant = (loading && variant.split('-').length > 1) ? String(variant.split('-').slice(0).join('-')).toLowerCase() : String(variant.split('-')[0]).toLowerCase();
 
   if (!loading) {
     return (
       <button
-        className={`${styles.btn} ${fluid ? styles['btn-fluid'] : ''} ${fullRounded ? styles['btn-full-rounded'] : ''} ${rounded ? styles['btn-rounded'] : ''} ${size ? styles[`btn-${String(size).toLowerCase()}`] : ''} ${variant ? styles[`btn-${String(variant).toLowerCase()}`] : ''}`}
+        className={`${styles.btn} ${shadow ? styles[`btn-shadow-${spinnerVariant}`] : ''} ${fluid ? styles['btn-fluid'] : ''} ${fullRounded ? styles['btn-full-rounded'] : ''} ${rounded ? styles['btn-rounded'] : ''} ${size ? styles[`btn-${String(size).toLowerCase()}`] : ''} ${variant ? styles[`btn-${String(variant).toLowerCase()}`] : ''}`}
         type={String(type).toLowerCase()}
       >
         { children }
@@ -37,7 +38,7 @@ export function Button(props) {
   return (
     <button
       disabled
-      className={`${styles.btn} ${fluid ? styles['btn-fluid'] : ''} ${fullRounded ? styles['btn-full-rounded'] : ''} ${rounded ? styles['btn-rounded'] : ''} ${size ? styles[`btn-${String(size).toLowerCase()}`] : ''} ${variant ? styles[`btn-${String(variant).toLowerCase()}`] : ''}`}
+      className={`${styles.btn} ${shadow ? styles[`btn-shadow-${spinnerVariant}`] : ''} ${fluid ? styles['btn-fluid'] : ''} ${fullRounded ? styles['btn-full-rounded'] : ''} ${rounded ? styles['btn-rounded'] : ''} ${size ? styles[`btn-${String(size).toLowerCase()}`] : ''} ${variant ? styles[`btn-${String(variant).toLowerCase()}`] : ''}`}
       type={String(type).toLowerCase()}
     >
       <Spinner variant={`btn-spinner-${spinnerVariant}`} size={`btn-spinner-${size}`} />
@@ -54,6 +55,7 @@ Button.propTypes = {
   fullRounded: PropTypes.bool,
   fluid: PropTypes.bool,
   loading: PropTypes.bool,
+  shadow: PropTypes.bool,
 };
 
 Button.defaultProps = {
@@ -64,4 +66,5 @@ Button.defaultProps = {
   fullRounded: false,
   fluid: false,
   loading: false,
+  shadow: false,
 };

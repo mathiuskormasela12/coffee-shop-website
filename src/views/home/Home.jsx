@@ -11,7 +11,7 @@ import { setTokens, removeTokens } from '../../redux/action/auth';
 import styles from './styles/styles.module.scss';
 
 // import all components
-import { Container, Button } from '../../components';
+import { Container, Button, Spinner } from '../../components';
 
 class Home extends Component {
   constructor(props) {
@@ -52,9 +52,12 @@ class Home extends Component {
           </h1>
           {accessToken && <p onClick={() => setData()} aria-hidden>Ada Token</p>}
           {value && <p>Data</p>}
-          <Button type="submit" variant="outline-primary" size="md" fullRounded>
+          <Button type="submit" loading variant="outline-primary" size="xl" fullRounded>
             Get Started
           </Button>
+          <br />
+          <br />
+          <Spinner size="lg" />
         </Container>
       </div>
     );

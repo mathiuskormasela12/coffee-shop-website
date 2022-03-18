@@ -6,6 +6,9 @@ button.btn {
 	font-weight: bold;
 	border-radius: 6px;
 	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 
 	&-fluid {
 		width: 100% !important;
@@ -57,7 +60,7 @@ button.btn {
 		color: $secondary;
 		transition: .5s background-color;
 
-		&:hover {
+		&:enabled:hover {
 			background-color: $primary;
 		}
 	}

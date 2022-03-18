@@ -1,0 +1,79 @@
+// ========== Spinner Main Styles
+
+%spinner-size {
+	height: 3em;
+	width: 3em;
+}
+
+%spinner-size-btn {
+	height: 2em;
+	width: 2em;
+}
+
+@keyframes start-spinner {
+	from {
+		transform: rotate(0deg);
+	} to {
+		transform: rotate(360deg);
+	}
+}
+
+span.spinner {
+	display: block;
+	border-radius: 50%;
+	background-color: transparent;
+	border: .3em solid transparent;
+	@include spinner(start-spinner, 1s);
+
+	&-xl {
+		font-size: 1.5rem;
+		@extend %spinner-size;
+	}
+
+	&-lg {
+		font-size: 1.2rem;
+		@extend %spinner-size;
+	}
+
+	&-md {
+		font-size: 1rem;
+		@extend %spinner-size;
+	}
+
+	&-sm {
+		font-size: .8rem;
+		@extend %spinner-size;
+	}
+
+	&-btn-spinner-xl {
+		@extend %spinner-size-btn;
+	}
+
+	&-btn-spinner-lg {
+		@extend %spinner-size-btn;
+	}
+
+	&-btn-spinner-md {
+		@extend %spinner-size-btn;
+	}
+
+	&-btn-spinner-sm {
+		@extend %spinner-size-btn;
+	}
+
+	&-primary {
+		@include spinner-border(.2em, $primary)
+	}
+
+	&-secondary {
+		@include spinner-border(.2em, $secondary)
+	}
+
+	&-btn-spinner-primary {
+		@include spinner-border(.15em, $primary)
+	}
+
+	&-btn-spinner-secondary {
+		@include spinner-border(.15em, $secondary)
+	}
+}

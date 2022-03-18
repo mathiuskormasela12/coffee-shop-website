@@ -1,0 +1,14 @@
+// ========== Mixins
+
+@mixin spinner-border($size, $color) {
+	border-top: $size solid $color;
+	border-right: $size solid $color;
+	border-bottom: $size solid $color;
+}
+
+@mixin spinner($animation-name, $times) {
+	animation-name: $animation-name;
+	animation-iteration-count: infinite;
+	animation-duration: $times;
+	animation-timing-function: linear;
+}

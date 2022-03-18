@@ -11,7 +11,9 @@ import { setTokens, removeTokens } from '../../redux/action/auth';
 import styles from './styles/styles.module.scss';
 
 // import all components
-import { Container, Button, Spinner } from '../../components';
+import {
+  Container, Button, Spinner, Navbar,
+} from '../../components';
 
 class Home extends Component {
   constructor(props) {
@@ -38,6 +40,7 @@ class Home extends Component {
 
     return (
       <div className={styles.home}>
+        <Navbar />
         <Container>
           <h1
             onClick={() => handleSetTokens({
@@ -54,12 +57,12 @@ class Home extends Component {
           {value && <p>Data</p>}
           <br />
           <br />
-          <Button type="submit" shadow loading variant="secondary" size="xl" fullRounded>
+          <Button type="submit" shadow variant="secondary" size="md" fullRounded>
             Get Started
           </Button>
           <br />
           <br />
-          <Spinner size="lg" />
+          <Spinner size="xl" />
         </Container>
       </div>
     );

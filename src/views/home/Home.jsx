@@ -52,7 +52,7 @@ class Home extends Component {
           </h1>
           {accessToken && <p onClick={() => setData()} aria-hidden>Ada Token</p>}
           {value && <p>Data</p>}
-          <Button type="submit" loading variant="outline-primary" size="xl" fullRounded>
+          <Button type="submit" variant="outline-secondary" size="xl" fullRounded>
             Get Started
           </Button>
           <br />

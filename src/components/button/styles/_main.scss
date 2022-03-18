@@ -71,7 +71,7 @@ button.btn {
 		color: $primary;
 		transition: .5s background-color;
 
-		&:hover {
+		&:enabled:hover {
 			background-color: $secondary;
 		}
 	}

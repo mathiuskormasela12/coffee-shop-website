@@ -69,11 +69,19 @@ span.spinner {
 		@include spinner-border(.2em, $secondary)
 	}
 
-	&-btn-spinner-primary {
+	&-btn-spinner-outline-primary {
 		@include spinner-border(.15em, $primary)
 	}
 
-	&-btn-spinner-secondary {
+	&-btn-spinner-outline-secondary {
 		@include spinner-border(.15em, $secondary)
+	}
+
+	&-btn-spinner-primary {
+		@include spinner-border(.15em, white)
+	}
+
+	&-btn-spinner-secondary {
+		@include spinner-border(.15em, white)
 	}
 }

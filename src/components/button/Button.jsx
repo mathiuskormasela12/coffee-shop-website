@@ -21,7 +21,7 @@ export function Button(props) {
     loading,
   } = props;
 
-  const spinnerVariant = variant.split('-').pop();
+  const spinnerVariant = (loading && variant.split('-').length > 1) ? variant.split('-').slice(0).join('-') : variant.split('-')[0];
 
   if (!loading) {
     return (

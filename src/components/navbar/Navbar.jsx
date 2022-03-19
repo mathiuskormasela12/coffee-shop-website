@@ -1,20 +1,23 @@
 // ========== Navbar
 // import all modules
-import React from 'react';
+import React, { Fragment, useState } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { NAVBAR_ITEMS, USER_TYPE } from '../../constant';
 
 // import all components
-import { Container, Button } from '..';
+import { Container, Button, TextField } from '..';
 
 // import styles
 import styles from './styles/styles.module.scss';
 
 // import assets
 import logo from '../../assets/icons/coffee-shop-logo.svg';
+import chat from '../../assets/icons/chat.svg';
+import user from '../../assets/img/user.png';
 
 export function Navbar(props) {
+  const [searchValue, setSearchValue] = useState('');
   const { active, userType } = props;
   let navLists = [];
 
@@ -25,6 +28,8 @@ export function Navbar(props) {
   } else {
     navLists = NAVBAR_ITEMS.NOT_LOGGED_IN;
   }
+
+  const handleSearch = (e) => setSearchValue(e.target.value);
 
   return (
     <nav className={`${styles.navbar}`}>
@@ -46,19 +51,45 @@ export function Navbar(props) {
             ))}
           </ul>
           <div className={styles['nav-side']}>
-            <Link to="/login" className={styles['btn-login']}>
-              Login
-            </Link>
-            <Button
-              type="button"
-              size="md"
-              variant="primary"
-              fullRounded
-              shadow
-              to="/register"
-            >
-              Sign Up
-            </Button>
+            {(userType === USER_TYPE.ADMIN || userType === USER_TYPE.USER) ? (
+              <Fragment>
+                <div className={styles.control}>
+                  <TextField
+                    type="search"
+                    rounded
+                    size="md"
+                    placeholder="Search"
+                    value={searchValue}
+                    onChange={handleSearch}
+                  />
+                </div>
+                <div className={styles.control}>
+                  <div className={styles['chats-container']}>
+                    <span className={styles['unread-chats']}>10+</span>
+                    <img src={chat} className={styles['chat-icon']} alt="Chat" />
+                  </div>
+                </div>
+                <div className={styles.control}>
+                  <img src={user} className={styles['user-icon']} alt="User" />
+                </div>
+              </Fragment>
+            ) : (
+              <Fragment>
+                <Link to="/login" className={styles['btn-login']}>
+                  Login
+                </Link>
+                <Button
+                  type="button"
+                  size="md"
+                  variant="primary"
+                  fullRounded
+                  shadow
+                  to="/register"
+                >
+                  Sign Up
+                </Button>
+              </Fragment>
+            )}
           </div>
         </div>
       </Container>

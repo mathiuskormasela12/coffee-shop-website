@@ -1,0 +1,75 @@
+// ========== TextField Main Styles
+
+input.text-field {
+	outline: none;
+	border: 1px solid $dark-young;
+	border-radius: 5px;
+	color: $dark;
+	width: 100%;
+	font-size: 1rem;
+	padding-left: .8em;
+
+	&-xl {
+		height: 3.2rem;
+	}
+
+	&-lg {
+		height: 2.8rem;
+	}
+
+	&-md {
+		height: 2.5rem;
+	}
+
+	&-sm {
+		height: 2.3rem;
+	}
+}
+
+div.search-field-container {
+	background-color: $gray;
+	font-size: 1rem;
+	border-radius: 5px;
+	overflow: hidden;
+	display: flex;
+	width: 100%;
+
+	& > div.search-icon {
+		width: auto;
+		padding: .8em .5em .7em 1em;
+		background-color: transparent;
+		
+		& > .icon {
+			cursor: pointer;
+			font-size: 1em;
+		}
+	}
+
+	& > input.search-field {
+		border: none;
+		outline: none;
+		width: calc(100% - 4em);
+		background-color: transparent;
+		font-size: 1em;
+	}
+
+	&-rounded {
+		border-radius: 30px;
+	}
+
+	&-xl {
+		font-size: 1.2rem;
+	}
+
+	&-lg {
+		font-size: 1.1rem;
+	}
+
+	&-md {
+		font-size: 1rem;
+	}
+
+	&-sm {
+		font-size: .8rem;
+	}
+}

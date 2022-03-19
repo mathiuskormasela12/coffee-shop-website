@@ -12,7 +12,11 @@ import styles from './styles/styles.module.scss';
 
 // import all components
 import {
-  Container, Button, Spinner, Navbar,
+  Container,
+  Button,
+  Spinner,
+  Navbar,
+  TextField,
 } from '../../components';
 
 class Home extends Component {
@@ -21,6 +25,7 @@ class Home extends Component {
 
     this.state = {
       title: 'Home | Coffee Shop',
+      val: '',
     };
   }
 
@@ -37,10 +42,11 @@ class Home extends Component {
       handleRemoveTokens,
       setData,
     } = this.props;
+    const { val } = this.state;
 
     return (
       <div className={styles.home}>
-        <Navbar />
+        <Navbar userType="ADMIN" />
         <Container>
           <h1
             onClick={() => handleSetTokens({
@@ -63,6 +69,13 @@ class Home extends Component {
           <br />
           <br />
           <Spinner size="xl" />
+          <TextField
+            type="search"
+            rounded
+            placeholder="Input nama"
+            value={val}
+            onChange={(e) => this.setState({ val: e.target.value })}
+          />
         </Container>
       </div>
     );

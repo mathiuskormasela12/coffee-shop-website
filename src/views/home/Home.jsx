@@ -29,7 +29,7 @@ class Home extends Component {
   render() {
     return (
       <div className={styles.home}>
-        <Navbar userType="ADMIN">
+        <Navbar userType="USER">
           <Container>
             <h1>Home</h1>
           </Container>

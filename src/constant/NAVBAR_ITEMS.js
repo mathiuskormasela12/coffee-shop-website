@@ -36,45 +36,75 @@ export const NAVBAR_ITEMS = {
   USER: [
     {
       id: 1,
+      name: 'Search Bar',
+      path: '/',
+    },
+    {
+      id: 2,
       name: 'Home',
       path: '#home',
     },
     {
-      id: 2,
+      id: 3,
       name: 'Product',
       path: '/product',
     },
     {
-      id: 3,
+      id: 4,
       name: 'Your Cart',
       path: '/cart',
     },
     {
-      id: 4,
+      id: 5,
       name: 'History',
       path: '/history',
+    },
+    {
+      id: 6,
+      name: 'Profile',
+      path: '/profile',
+    },
+    {
+      id: 7,
+      name: 'Chat',
+      path: '/chat',
     },
   ],
   ADMIN: [
     {
       id: 1,
+      name: 'Search Bar',
+      path: '/',
+    },
+    {
+      id: 2,
       name: 'Home',
       path: '#home',
     },
     {
-      id: 2,
+      id: 3,
       name: 'Product',
       path: '/product',
     },
     {
-      id: 3,
+      id: 4,
       name: 'Orders',
       path: '/orders',
     },
     {
-      id: 4,
+      id: 5,
       name: 'Dashboard',
       path: '/dashboard',
+    },
+    {
+      id: 6,
+      name: 'Profile',
+      path: '/profile',
+    },
+    {
+      id: 7,
+      name: 'Chat',
+      path: '/chat',
     },
   ],
 };

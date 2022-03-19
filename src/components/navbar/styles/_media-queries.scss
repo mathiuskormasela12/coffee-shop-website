@@ -40,6 +40,15 @@
 						&-login {
 							display: flex !important;
 						}
+
+						&-profile,
+						&-message {
+							display: flex !important;
+						}
+
+						&-search-bar {
+							display: flex !important;
+						}
 					}
 					
 					li.nav-items, 

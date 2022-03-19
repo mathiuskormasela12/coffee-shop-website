@@ -52,6 +52,12 @@ export function Navbar(props) {
                           {item.name}
                         </Link>
                       </li>
+                    ) : item.name === 'Chat' ? (
+                      <li key={String(item.id)} className={`${styles['nav-items']} ${styles['nav-items-message']} ${String(active).toLowerCase() === item.name.toLowerCase() ? styles.active : ''}`}>
+                        <Link to={item.path} className={styles['nav-link']}>
+                          {item.name}
+                        </Link>
+                      </li>
                     ) : (
                       <li className={`${styles['nav-items']} ${String(active).toLowerCase() === item.name.toLowerCase() ? styles.active : ''}`}>
                         <Link to={item.path} className={styles['nav-link']}>
@@ -67,6 +73,25 @@ export function Navbar(props) {
                   </Fragment>
                 ) : item.path === '/login' ? (
                   <li key={String(item.id)} className={`${styles['nav-items']} ${styles['nav-items-login']} ${String(active).toLowerCase() === item.name.toLowerCase() ? styles.active : ''}`}>
+                    <Link to={item.path} className={styles['nav-link']}>
+                      {item.name}
+                    </Link>
+                  </li>
+                ) : item.name === 'Search Bar' ? (
+                  <li key={String(item.id)} className={`${styles['nav-items']} ${styles['nav-items-search-bar']} ${String(active).toLowerCase() === item.name.toLowerCase() ? styles.active : ''}`}>
+                    <div className={styles['nav-items-search-bar-container']}>
+                      <TextField
+                        type="search"
+                        rounded
+                        size="md"
+                        placeholder="Search"
+                        value={searchValue}
+                        onChange={handleSearch}
+                      />
+                    </div>
+                  </li>
+                ) : item.name === 'Profile' ? (
+                  <li key={String(item.id)} className={`${styles['nav-items']} ${styles['nav-items-profile']} ${String(active).toLowerCase() === item.name.toLowerCase() ? styles.active : ''}`}>
                     <Link to={item.path} className={styles['nav-link']}>
                       {item.name}
                     </Link>

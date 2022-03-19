@@ -58,6 +58,21 @@ div.hero {
 					&-login {
 						display: none !important;
 					}
+
+					&-profile,
+					&-message {
+						display: none !important;
+					}
+
+					&-search-bar {
+						box-sizing: content-box;
+						display: none !important;
+						padding: 1rem 0 1.2rem 0;
+
+						& > .nav-items-search-bar-container {
+							width: 75%;
+						}
+					}
 				}
 	
 				li.nav-items,

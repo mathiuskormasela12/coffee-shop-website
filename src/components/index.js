@@ -5,3 +5,4 @@ export * from './button/Button';
 export * from './spinner/Spinner';
 export * from './navbar/Navbar';
 export * from './textfield/TextField';
+export * from './burgermenu/BurgerMenu';

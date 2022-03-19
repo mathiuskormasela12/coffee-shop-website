@@ -13,6 +13,13 @@ div.hero {
 			display: flex;
 			flex-wrap: wrap;
 			width: 100%;
+
+			div.burger {
+				display: none;
+				position: absolute;
+				right: 1.5rem;
+				z-index: 5;
+			}
 	
 			figure.nav-brand {
 				display: flex;
@@ -30,6 +37,10 @@ div.hero {
 					font-size: 1.1rem;
 					font-family: rubik-bold;
 				}
+			}
+
+			.show {
+				display: flex !important;
 			}
 	
 			ul.nav-list {

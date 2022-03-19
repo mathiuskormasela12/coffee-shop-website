@@ -1,0 +1,22 @@
+// ========== BurgerMenu Main Styles
+
+div.burger {
+	cursor: pointer;
+	transform: rotateY(180deg);
+
+	span.burgers {
+		display: block;
+		width: 1rem;
+		height: .2rem;
+		background-color: $dark-young;
+		margin-bottom: .2rem;
+
+		&:nth-child(2) {
+			width: .7rem;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}

@@ -6,7 +6,9 @@ import { Link } from 'react-router-dom';
 import { NAVBAR_ITEMS, USER_TYPE } from '../../constant';
 
 // import all components
-import { Container, Button, TextField } from '..';
+import {
+  Container, Button, TextField, BurgerMenu,
+} from '..';
 
 // import styles
 import styles from './styles/styles.module.scss';
@@ -18,6 +20,7 @@ import user from '../../assets/img/user.png';
 
 export function Navbar(props) {
   const [searchValue, setSearchValue] = useState('');
+  const [showNavbar, setShowNavbar] = useState(false);
   const { active, userType, children } = props;
   let navLists = [];
 
@@ -30,6 +33,7 @@ export function Navbar(props) {
   }
 
   const handleSearch = (e) => setSearchValue(e.target.value);
+  const handleShowNavbar = () => setShowNavbar((currentShowNavbar) => !currentShowNavbar);
 
   return (
     <div className={styles.hero}>
@@ -42,7 +46,7 @@ export function Navbar(props) {
                 Coffee Shop
               </figcaption>
             </figure>
-            <ul className={`${styles['nav-list']}`}>
+            <ul className={`${styles['nav-list']} ${showNavbar ? styles.show : ''}`}>
               {navLists.map((item, index) => (
                 (index === navLists.length - 1) ? (
                   <Fragment key={String(item.id)}>
@@ -146,10 +150,17 @@ export function Navbar(props) {
                 </Fragment>
               )}
             </div>
+            <div
+              className={styles.burger}
+              onClick={handleShowNavbar}
+              aria-hidden
+            >
+              <BurgerMenu />
+            </div>
           </div>
         </Container>
       </nav>
-      <span className={styles['hero-container']} />
+      {showNavbar && <span className={styles['hero-container']} />}
       {children}
     </div>
   );

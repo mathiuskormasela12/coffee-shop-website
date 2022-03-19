@@ -134,7 +134,7 @@ div.hero {
 						margin-right: 0;
 	
 						& > img.user-icon {
-							width: 2.2rem;
+							max-width: 2.2rem;
 							cursor: pointer;
 						}
 					}
@@ -160,7 +160,7 @@ div.hero {
 						}
 	
 						img.chat-icon {
-							width: 2rem;
+							max-width: 2rem;
 							cursor: pointer;
 						}
 					 }

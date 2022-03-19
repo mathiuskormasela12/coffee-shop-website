@@ -7,10 +7,10 @@ import PropTypes from 'prop-types';
 import styles from './styles/styles.module.scss';
 
 export function Container(props) {
-  const { children, fluid } = props;
+  const { children, fluid, relative } = props;
 
   return (
-    <div className={`${styles.container} ${fluid ? styles['container-fluid'] : ''}`}>
+    <div className={`${styles.container} ${fluid ? styles['container-fluid'] : ''} ${relative ? `${styles['container-relative']}` : ''}`}>
       { children }
     </div>
   );
@@ -19,8 +19,10 @@ export function Container(props) {
 Container.propTypes = {
   children: PropTypes.node.isRequired,
   fluid: PropTypes.bool,
+  relative: PropTypes.bool,
 };
 
 Container.defaultProps = {
   fluid: false,
+  relative: false,
 };

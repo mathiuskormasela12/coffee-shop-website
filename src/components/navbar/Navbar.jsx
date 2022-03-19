@@ -37,8 +37,8 @@ export function Navbar(props) {
 
   return (
     <div className={styles.hero}>
-      <nav className={`${styles.navbar}`}>
-        <Container>
+      <nav className={`${styles.navbar} ${showNavbar ? styles.fixed : ''}`}>
+        <Container relative>
           <div className={styles['nav-flex']}>
             <figure className={styles['nav-brand']}>
               <img src={logo} className={styles['nav-brand-img']} alt="Coffee Shop" />

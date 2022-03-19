@@ -7,6 +7,7 @@ div.hero {
 		padding: 2rem 0;
 		position: relative;
 		z-index: 5;
+		width: 100%;
 		background-color: white;
 	
 		div.nav-flex {
@@ -17,7 +18,8 @@ div.hero {
 			div.burger {
 				display: none;
 				position: absolute;
-				right: 1.5rem;
+				right: 0;
+				top: .5rem;
 				z-index: 5;
 			}
 	
@@ -169,5 +171,9 @@ div.hero {
 
 	span.hero-container {
 		display: none;
+	}
+
+	.fixed {
+		position: fixed !important;
 	}
 }

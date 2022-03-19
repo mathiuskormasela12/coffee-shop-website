@@ -5,6 +5,10 @@ div.container {
 	width: calc(100% - 4rem);
 	margin: 0 auto;
 
+	&-relative {
+		position: relative;
+	}
+
 	&-fluid {
 		max-width: 100%;
 		width: 100%;

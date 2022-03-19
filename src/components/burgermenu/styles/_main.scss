@@ -5,14 +5,16 @@ div.burger {
 	transform: rotateY(180deg);
 
 	span.burgers {
+		font-size: 1.3rem;
 		display: block;
-		width: .8rem;
-		height: .14rem;
-		background-color: $dark-young;
-		margin-bottom: .2rem;
+		width: .8em;
+		height: .14em;
+		background-color: $dark;
+		margin-bottom: .2em;
+		border-radius: 10em;
 
 		&:nth-child(2) {
-			width: .55rem;
+			width: .55em;
 		}
 
 		&:last-child {

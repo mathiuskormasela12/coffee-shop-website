@@ -49,6 +49,16 @@ div.hero {
 				li.nav-footer {
 					display: none !important;
 				}
+
+				li.nav-items {
+					&-register {
+						display: none !important;
+					}
+
+					&-login {
+						display: none !important;
+					}
+				}
 	
 				li.nav-items,
 				li.nav-footer {

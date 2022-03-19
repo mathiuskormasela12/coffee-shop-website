@@ -46,17 +46,31 @@ export function Navbar(props) {
               {navLists.map((item, index) => (
                 (index === navLists.length - 1) ? (
                   <Fragment key={String(item.id)}>
-                    <li className={`${styles['nav-items']} ${String(active).toLowerCase() === item.name.toLowerCase() ? styles.active : ''}`}>
-                      <Link to={item.path} className={styles['nav-link']}>
-                        {item.name}
-                      </Link>
-                    </li>
+                    {item.path === '/register' ? (
+                      <li className={`${styles['nav-items']} ${styles['nav-items-register']} ${String(active).toLowerCase() === item.name.toLowerCase() ? styles.active : ''}`}>
+                        <Link to={item.path} className={styles['nav-link']}>
+                          {item.name}
+                        </Link>
+                      </li>
+                    ) : (
+                      <li className={`${styles['nav-items']} ${String(active).toLowerCase() === item.name.toLowerCase() ? styles.active : ''}`}>
+                        <Link to={item.path} className={styles['nav-link']}>
+                          {item.name}
+                        </Link>
+                      </li>
+                    )}
                     <li className={`${styles['nav-footer']} ${String(active).toLowerCase() === item.name.toLowerCase() ? styles.active : ''}`}>
                       <p className={styles['nav-link']}>
                         &copy; 2022 Coffee Shop
                       </p>
                     </li>
                   </Fragment>
+                ) : item.path === '/login' ? (
+                  <li key={String(item.id)} className={`${styles['nav-items']} ${styles['nav-items-login']} ${String(active).toLowerCase() === item.name.toLowerCase() ? styles.active : ''}`}>
+                    <Link to={item.path} className={styles['nav-link']}>
+                      {item.name}
+                    </Link>
+                  </li>
                 ) : (
                   <li key={String(item.id)} className={`${styles['nav-items']} ${String(active).toLowerCase() === item.name.toLowerCase() ? styles.active : ''}`}>
                     <Link to={item.path} className={styles['nav-link']}>

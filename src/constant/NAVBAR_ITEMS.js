@@ -22,6 +22,16 @@ export const NAVBAR_ITEMS = {
       name: 'Partners',
       path: '#partners',
     },
+    {
+      id: 5,
+      name: 'Login',
+      path: '/login',
+    },
+    {
+      id: 6,
+      name: 'Register',
+      path: '/register',
+    },
   ],
   USER: [
     {

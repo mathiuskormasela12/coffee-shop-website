@@ -4,11 +4,13 @@ div.hero {
 	position: relative;
 
 	nav.navbar {
-		padding: 2rem 0;
+		height: 7rem;
 		position: relative;
 		z-index: 5;
 		width: 100%;
 		background-color: white;
+		display: flex;
+		align-items: center;
 	
 		div.nav-flex {
 			display: flex;

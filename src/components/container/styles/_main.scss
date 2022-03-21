@@ -18,5 +18,10 @@ div.container {
 @media screen and (max-width: 1366px) {
 	div.container {
 		max-width: 90%;
+
+		&-fluid {
+			max-width: 100%;
+			width: 100%;
+		}
 	}
 }

@@ -3,7 +3,9 @@
 import React, { Fragment, useState } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
 import { NAVBAR_ITEMS, USER_TYPE } from '../../constant';
+import { setToggle } from '../../redux/action/navbar';
 
 // import all components
 import {
@@ -20,7 +22,8 @@ import user from '../../assets/img/user.png';
 
 export function Navbar(props) {
   const [searchValue, setSearchValue] = useState('');
-  const [showNavbar, setShowNavbar] = useState(false);
+  const dispatch = useDispatch();
+  const showNavbar = useSelector((currentState) => currentState.navbar.show);
   const { active, userType, children } = props;
   let navLists = [];
 
@@ -33,7 +36,7 @@ export function Navbar(props) {
   }
 
   const handleSearch = (e) => setSearchValue(e.target.value);
-  const handleShowNavbar = () => setShowNavbar((currentShowNavbar) => !currentShowNavbar);
+  const handleShowNavbar = () => dispatch(setToggle());
 
   return (
     <div className={styles.hero}>

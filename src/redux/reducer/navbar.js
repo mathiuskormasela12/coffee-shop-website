@@ -1,15 +1,15 @@
 // ========== Data Reducer
 
 const initialState = {
-  value: null,
+  show: false,
 };
 
-const dataReducer = (state = initialState, action) => {
+const navbarReducer = (state = initialState, action) => {
   switch (action.type) {
-    case 'SET_DATA': {
+    case 'TOGGLE': {
       return {
         ...state,
-        value: !state.value,
+        show: !state.show,
       };
     }
 
@@ -21,4 +21,4 @@ const dataReducer = (state = initialState, action) => {
   }
 };
 
-export default dataReducer;
+export default navbarReducer;

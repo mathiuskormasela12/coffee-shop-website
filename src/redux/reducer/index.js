@@ -7,7 +7,7 @@ import hardSet from 'redux-persist/es/stateReconciler/hardSet';
 
 // import all reducers
 import authReducer from './auth';
-import dataReducer from './data';
+import navbarReducer from './navbar';
 
 const rootPersistConfig = {
   key: 'root',
@@ -23,7 +23,7 @@ const authPersistConfig = {
 
 const rootReducer = combineReducers({
   auth: persistReducer(authPersistConfig, authReducer),
-  data: dataReducer,
+  navbar: navbarReducer,
 });
 
 export default persistReducer(rootPersistConfig, rootReducer);

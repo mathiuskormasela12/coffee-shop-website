@@ -3,4 +3,41 @@
 div.home {
 	min-height: 100vh;
 	background-color: white;
+
+	.full-bg {
+		min-height: 100vh !important;
+		padding-top: 0 !important;
+	}
+
+	div.hero-bg {
+		min-height: calc(100vh - 7rem);
+		background: linear-gradient(
+			rgba(0, 0, 0, 0.3),
+			rgba(0, 0, 0, 0.3)
+		), url('../../../assets/img/home-page.png') no-repeat center center;
+		background-size: cover;
+		padding-top: 5.5rem;
+
+		header.hero-header {
+			max-width: 35rem;
+
+			h1.title {
+				font-size: 2.8rem;
+				font-family: rubik-bold;
+				color: white;
+				margin-bottom: 1.3rem;
+				line-height: 3.7rem;
+				word-spacing: .1rem;
+			}
+	
+			h4.subtitle {
+				font-size: 1.3rem;
+				color: white;
+				font-family: rubik;
+				line-height: 2rem;
+				margin-bottom: 1.5rem;
+				word-spacing: .1rem;
+			}
+		}
+	}
 }
